@@ -1,11 +1,12 @@
 # Global voice commands (see https://vocola.net/v3/LanguageReference)
+# TODO: optimized number and line number variables
 # $using Library.Vocola;
 # tick = {LeftButton};
 # take = {LeftButton_Hold};
 # dump = {LeftButton_Release};
 sleep = SendSystemKeys({Ctrl+Alt+z});
 flop = SendSystemKeys({Alt+tab});
-boom = {Enter};
+boom = SendSystemKeys({Enter});
 
 # Switch applications and windows
 
@@ -13,81 +14,83 @@ boom = {Enter};
          | studio = "Microsoft Visual Studio"
          | code = "visual studio code"
          | TC = "Total Commander"
+         | chat = "WhatsApp"
+         | signal = "Signal"
          );
 
 
 # Switch by executable name
 Use   <app>     = HearCommand("Switch To $1");
-
+Launch   <app>     = HearCommand("Open $1");
 
 <number> := 1..100; 
 <line_number> := 1..9000;
-go tab <number>= {Ctrl+tab_$1};
-save = {Ctrl+s};
+go tab <number>= SendSystemKeys({Ctrl+tab_$1});
+save = SendSystemKeys({Ctrl+s});
 
-up = {Up};
-down = {Down};
-left = {Left};
-right = {Right};
+up = SendSystemKeys({Up});
+down = SendSystemKeys({Down});
+left = SendSystemKeys({Left});
+right = SendSystemKeys({Right});
 
-up <number> = {Up_$1};
-down <number> = {Down_$1};
-left <number> = {Left_$1};
-right <number> = {Right_$1};
+up <number> = SendSystemKeys({Up_$1});
+down <number> = SendSystemKeys({Down_$1});
+left <number> = SendSystemKeys({Left_$1});
+right <number> = SendSystemKeys({Right_$1});
 
-jump = {Ctrl+Right};
-jump back = {Ctrl+Left};
-jump <number> = {Ctrl+Right_$1};
-jump back <number> = {Ctrl+Left_$1};
+jump = SendSystemKeys({Ctrl+Right});
+jump back = SendSystemKeys({Ctrl+Left});
+jump <number> = SendSystemKeys({Ctrl+Right_$1});
+jump back <number> = SendSystemKeys({Ctrl+Left_$1});
 
-mark = {Shift+Right};
-mark back = {Shift+Left};
-mark <number> = {Shift+Right_$1};
-mark back <number> = {Shift+Left_$1};
+mark = SendSystemKeys({Shift+Right});
+mark back = SendSystemKeys({Shift+Left});
+mark <number> = SendSystemKeys({Shift+Right_$1});
+mark back <number> = SendSystemKeys({Shift+Left_$1});
 
-mark jump  = {Ctrl+Shift+Right};
-mark jump back = {Ctrl+Shift+Left};
+mark jump  = SendSystemKeys({Ctrl+Shift+Right});
+mark jump back = SendSystemKeys({Ctrl+Shift+Left});
 
-mark jump <number> = {Ctrl+Shift+Right_$1};
-mark jump back <number> = {Ctrl+Shift+Left_$1};
+mark jump <number> = SendSystemKeys({Ctrl+Shift+Right_$1});
+mark jump back <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
 
-mark up = {Ctrl+Shift+Up};
-mark down = {Shift+Down};
-mark up <number> = {Shift+Up_$1};
-mark down <number> = {Shift+Down_$1};
+mark up = SendSystemKeys({Ctrl+Shift+Up});
+mark down = SendSystemKeys({Shift+Down});
+mark up <number> = SendSystemKeys({Shift+Up_$1});
+mark down <number> = SendSystemKeys({Shift+Down_$1});
 
-home = {Home};
-end = {End};
-page up = {PageUp};
-page down = {PageDown};
+home = SendSystemKeys({Home});
+end = SendSystemKeys({End});
+page up = SendSystemKeys({PageUp});
+page down = SendSystemKeys({PageDown});
 
-mark home = {Shift+Home};
-mark end = {Shift+End};
-mark page up = {Shift+PageUp};
-mark page = {Shift+PageDown};
+mark home = SendSystemKeys({Shift+Home});
+mark end = SendSystemKeys({Shift+End});
+mark page up = SendSystemKeys({Shift+PageUp});
+mark page = SendSystemKeys({Shift+PageDown});
 
-mark word = {Ctrl+Left} {Ctrl+Shift+Right};
-dump = {Delete};
-dump <number> = {Delete_$1};
-dump back = {Backspace};
-dump back <number> = {Backspace_$1};
-mark line = {Shift+End} {Shift+Home};
-dump line = {Home} {Shift+End} {Delete};
+mark word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right});
+dump = SendSystemKeys({Delete});
+dump <number> = SendSystemKeys({Delete_$1});
+dump back = SendSystemKeys({Backspace});
+dump back <number> = SendSystemKeys({Backspace_$1});
+mark line = SendSystemKeys({Shift+End} {Shift+Home});
+dump line = SendSystemKeys({Home} {Shift+End} {Delete});
 
-go tab = {Ctrl+tab};
-back tab = {Ctrl+Shift+tab};
-go tab <number>= {Ctrl+tab_$1};
-back tab <number>= {Ctrl+Shift+tab_$1};
+go tab = SendSystemKeys({Ctrl+tab});
+back tab = SendSystemKeys({Ctrl+Shift+tab});
+go tab <number>= SendSystemKeys({Ctrl+tab_$1});
+back tab <number>= SendSystemKeys({Ctrl+Shift+tab_$1});
 
 fly to <line_number> = {Ctrl+g} Wait(200) $1 {Enter};
-jump end = {Ctrl+End};
-jump home = {Ctrl+Home};
+jump end = SendSystemKeys({Ctrl+End});
+jump home = SendSystemKeys({Ctrl+Home});
 
-lift = {Alt+Up};
-lift down = {Alt+Down};
-split = {Ctrl+Alt+Down};
-split up = {Ctrl+Alt+Up};
-lift <number> = {Alt+Up_$1};
-lift down <number> = {Alt+Down_$1};
-split <number> = {Ctrl+Alt+Down_$1};
-split up <number> = {Ctrl+Alt+Up_$1};
+lift = SendSystemKeys({Alt+Up});
+lift down = SendSystemKeys({Alt+Down});
+split = SendSystemKeys({Ctrl+Alt+Down});
+split up = SendSystemKeys({Ctrl+Alt+Up});
+lift <number> = SendSystemKeys({Alt+Up_$1});
+lift down <number> = SendSystemKeys({Alt+Down_$1});
+split <number> = SendSystemKeys({Ctrl+Alt+Down_$1});
+split up <number> = SendSystemKeys({Ctrl+Alt+Up_$1});
