@@ -111,6 +111,7 @@ back tab <number>= SendSystemKeys({Ctrl+Shift+tab_$1});
 
 fly to <line_number> = {Ctrl+g} Wait(200) $1 {Enter};
 find = SendSystemKeys({Ctrl+f}) WSR_sleep();
+go file = SendSystemKeys({Ctrl+p});
 
 hop end = SendSystemKeys({Ctrl+End});
 hop home = SendSystemKeys({Ctrl+Home});
