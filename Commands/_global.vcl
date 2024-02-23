@@ -64,6 +64,11 @@ hop back = SendSystemKeys({Ctrl+Left});
 hop <number> = SendSystemKeys({Ctrl+Right_$1});
 hop back <number> = SendSystemKeys({Ctrl+Left_$1});
 
+home = SendSystemKeys({Home});
+end = SendSystemKeys({End});
+page up = SendSystemKeys({PageUp});
+page down = SendSystemKeys({PageDown});
+
 mark = SendSystemKeys({Shift+Right});
 mark back = SendSystemKeys({Shift+Left});
 mark <number> = SendSystemKeys({Shift+Right_$1});
@@ -83,10 +88,6 @@ mark down <number> = SendSystemKeys({Shift+Down_$1});
 mark hop home = SendSystemKeys({Ctrl+Shift+Home});
 mark hop end = SendSystemKeys({Ctrl+Shift+End});
 
-home = SendSystemKeys({Home});
-end = SendSystemKeys({End});
-page up = SendSystemKeys({PageUp});
-page down = SendSystemKeys({PageDown});
 
 mark home = SendSystemKeys({Shift+Home});
 mark end = SendSystemKeys({Shift+End});
@@ -94,11 +95,13 @@ mark page up = SendSystemKeys({Shift+PageUp});
 mark page = SendSystemKeys({Shift+PageDown});
 
 mark word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right});
+mark line = SendSystemKeys({Shift+End} {Shift+Home});
+
+
 dump = SendSystemKeys({Delete});
 dump <number> = SendSystemKeys({Delete_$1});
 dump back = SendSystemKeys({Backspace});
 dump back <number> = SendSystemKeys({Backspace_$1});
-mark line = SendSystemKeys({Shift+End} {Shift+Home});
 dump line = SendSystemKeys({Home} {Shift+End} {Delete});
 
 go tab = SendSystemKeys({Ctrl+tab});

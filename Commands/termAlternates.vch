@@ -4,6 +4,7 @@
 $using Library.Vocola;
 
 addTermAlternates() :=
+    AddTermAlternate(Shade, shape, shaped, shed, shad)
     AddTermAlternate(Edit, "And it")
     AddTermAlternate(hop, hope)
     AddTermAlternate(Show, shall)
