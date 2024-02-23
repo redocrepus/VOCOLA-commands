@@ -1,0 +1,14 @@
+# Register alternate command words to prevent misrecognitions
+# See discussion at http://vocola.net/v3/CommandSequences.asp#Caveat
+
+$using Library.Vocola;
+
+addTermAlternates() :=
+    AddTermAlternate(Edit, "And it")
+    AddTermAlternate(Show, shall)
+    AddTermAlternate(Hide, Hyde)
+    AddTermAlternate(Comment, ", And", comments)
+    AddTermAlternate(End, And, ends)
+    AddTermAlternate(come, come, conn)
+    
+    ;
