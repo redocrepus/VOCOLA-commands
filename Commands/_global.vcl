@@ -59,29 +59,29 @@ down <number> = SendSystemKeys({Down_$1});
 left <number> = SendSystemKeys({Left_$1});
 right <number> = SendSystemKeys({Right_$1});
 
-jump = SendSystemKeys({Ctrl+Right});
-jump back = SendSystemKeys({Ctrl+Left});
-jump <number> = SendSystemKeys({Ctrl+Right_$1});
-jump back <number> = SendSystemKeys({Ctrl+Left_$1});
+hop = SendSystemKeys({Ctrl+Right});
+hop back = SendSystemKeys({Ctrl+Left});
+hop <number> = SendSystemKeys({Ctrl+Right_$1});
+hop back <number> = SendSystemKeys({Ctrl+Left_$1});
 
 mark = SendSystemKeys({Shift+Right});
 mark back = SendSystemKeys({Shift+Left});
 mark <number> = SendSystemKeys({Shift+Right_$1});
 mark back <number> = SendSystemKeys({Shift+Left_$1});
 
-mark jump  = SendSystemKeys({Ctrl+Shift+Right});
-mark jump back = SendSystemKeys({Ctrl+Shift+Left});
+mark hop  = SendSystemKeys({Ctrl+Shift+Right});
+mark hop back = SendSystemKeys({Ctrl+Shift+Left});
 
-mark jump <number> = SendSystemKeys({Ctrl+Shift+Right_$1});
-mark jump back <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
+mark hop <number> = SendSystemKeys({Ctrl+Shift+Right_$1});
+mark hop back <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
 
 mark up = SendSystemKeys({Ctrl+Shift+Up});
 mark down = SendSystemKeys({Shift+Down});
 mark up <number> = SendSystemKeys({Shift+Up_$1});
 mark down <number> = SendSystemKeys({Shift+Down_$1});
 
-mark jump home = SendSystemKeys({Ctrl+Shift+Home});
-mark jump end = SendSystemKeys({Ctrl+Shift+End});
+mark hop home = SendSystemKeys({Ctrl+Shift+Home});
+mark hop end = SendSystemKeys({Ctrl+Shift+End});
 
 home = SendSystemKeys({Home});
 end = SendSystemKeys({End});
@@ -109,15 +109,15 @@ back tab <number>= SendSystemKeys({Ctrl+Shift+tab_$1});
 fly to <line_number> = {Ctrl+g} Wait(200) $1 {Enter};
 find = SendSystemKeys({Ctrl+f}) WSR_sleep();
 
-jump end = SendSystemKeys({Ctrl+End});
-jump home = SendSystemKeys({Ctrl+Home});
+hop end = SendSystemKeys({Ctrl+End});
+hop home = SendSystemKeys({Ctrl+Home});
 
-lift = SendSystemKeys({Alt+Up});
-lift down = SendSystemKeys({Alt+Down});
+move up = SendSystemKeys({Alt+Up});
+move = SendSystemKeys({Alt+Down});
 split = SendSystemKeys({Ctrl+Alt+Down});
 split up = SendSystemKeys({Ctrl+Alt+Up});
-lift <number> = SendSystemKeys({Alt+Up_$1});
-lift down <number> = SendSystemKeys({Alt+Down_$1});
+move up <number> = SendSystemKeys({Alt+Up_$1});
+move <number> = SendSystemKeys({Alt+Down_$1});
 split <number> = SendSystemKeys({Ctrl+Alt+Down_$1});
 split up <number> = SendSystemKeys({Ctrl+Alt+Up_$1});
 
