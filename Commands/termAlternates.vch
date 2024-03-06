@@ -4,13 +4,43 @@
 $using Library.Vocola;
 
 addTermAlternates() :=
+    AddTermAlternate(end, and, ends)
+    AddTermAlternate(abort, aboard)
+    AddTermAlternate(down, no, downed)
+    AddTermAlternate(back, bag, peck)
+    AddTermAlternate(mark, market, Markka, marked, marks)
+    AddTermAlternate(flop, flow)
+    AddTermAlternate(up, at)
+    AddTermAlternate(go, gold, gold, goal)
+    AddTermAlternate(lists, these, this, list, least)
+    AddTermAlternate(wipe, white, why, wife, wide)
     AddTermAlternate(Shade, shape, shaped, shed, shad)
+    AddTermAlternate(hop, hope, Hope, hopped, hops)
+    AddTermAlternate(hip, heap, heaped, hit, heat, heated, he)
+    AddTermAlternate(line, lined, lines, lying, lion, lions, wind, windsm wine, vine)
     AddTermAlternate(Edit, "And it")
-    AddTermAlternate(hop, hope)
+    AddTermAlternate(right, write, rite, wright, rights, writes, wrights)
+    AddTermAlternate(step, steps, stepped, that)
+    AddTermAlternate(pick, eat, peek, peak, speak)
+    AddTermAlternate(def, death, Death)
+    AddTermAlternate(abort, aboard, a port)
+    AddTermAlternate(push, porch, porche)
+    AddTermAlternate(master, "massed her", "massed", "muster")
+    AddTermAlternate(build, "deal that")
+    AddTermAlternate(build all, "Beloved old", "the old old", "deal that all", "dealed all", "Beloved home", "Peel the O")
+
+
+    AddTermAlternate(abort build, "A port deal", "A port build", "the old old")
+
+    AddTermAlternate(pick, "big", "pig", "peak", "peck", "peaked")
+    AddTermAlternate(app, "at")
     AddTermAlternate(Show, shall)
     AddTermAlternate(Hide, Hyde)
     AddTermAlternate(Comment, ", And", comments)
+    AddTermAlternate(Comment, ", And", comments)
     AddTermAlternate(End, And, ends)
     AddTermAlternate(come, come, conn)
+    AddTermAlternate(comma, cola, coma)
+    
     
     ;

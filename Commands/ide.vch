@@ -1,0 +1,14 @@
+<number> := 1..100;
+# Voice commands for devenv
+Go to symbol = {Ctrl+i};
+Go to file = {Ctrl+p};
+back = {Alt+Left};
+back <number>= {Alt+Left_$1};
+forward = {Alt+Right};
+close = {Ctrl+F4};
+def = {F12};
+declaration = {Ctrl+F12};
+peek = {Alt+F12};
+name = {F2};
+
+props = {Alt+Enter};
