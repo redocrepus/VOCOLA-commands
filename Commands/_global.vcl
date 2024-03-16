@@ -50,10 +50,12 @@ step = SendSystemKeys({F10});
 step <number> = SendSystemKeys({F10_$1});
 dive = SendSystemKeys({F11});
 step out = SendSystemKeys({Shift+F11});
+breakpoint = SendSystemKeys({F9});
 bug here = SendSystemKeys({Ctrl+F10});
 run here = SendSystemKeys({Ctrl+F10});
 build all = SendSystemKeys({Ctrl+Shift+b});
 abort build = SendSystemKeys({Ctrl+Break});
+complie = SendSystemKeys({Ctrl+F7});
 
 abort = SendSystemKeys({Escape});
 
@@ -117,10 +119,10 @@ mark <number> = SendSystemKeys({Shift+Right_$1});
 mark left <number> = SendSystemKeys({Shift+Left_$1});
 
 mark hop  = SendSystemKeys({Ctrl+Shift+Right});
-mark hip = SendSystemKeys({Ctrl+Shift+Left});
+mirck = SendSystemKeys({Ctrl+Shift+Left});
 
 mark hop <number> = SendSystemKeys({Ctrl+Shift+Right_$1});
-mark hip <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
+mirck <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
 
 mark up = SendSystemKeys({Ctrl+Shift+Up});
 mark down = SendSystemKeys({Shift+down});
@@ -144,7 +146,7 @@ yum = SendSystemKeys({Delete});
 yum <number> = SendSystemKeys({Delete_$1});
 wipe = SendSystemKeys({Backspace});
 wipe <number> = SendSystemKeys({Backspace_$1});
-wipe line = SendSystemKeys({Home} {Shift+End} {Delete});
+wipe line = SendSystemKeys({end} {Shift+Home} {Shift+Home} {Backspace} {Backspace});
 copy line = SendSystemKeys({Home} {Shift+End} {Ctrl+c});
 cut line = SendSystemKeys({Home} {Shift+End} {Ctrl+x});
 copy word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Ctrl+c});
@@ -190,7 +192,7 @@ split up <number> = SendSystemKeys({shift+Alt+Up_$1});
 shade = SendSystemKeys({Ctrl+/});
 
 
-
+quote = {U+0022} {U+0022} SendSystemKeys({Left});
 
 
 
@@ -203,3 +205,5 @@ next = SendSystemKeys({F3});
 former = SendSystemKeys({Shift+F3});
 next <number> = SendSystemKeys({F3_$1});
 former <number> = SendSystemKeys({Shift+F3_$1});
+
+dot = SendSystemKeys({.});

@@ -5,6 +5,8 @@ $using Library.Vocola;
 
 addTermAlternates() :=
     AddTermAlternate(end, and, ends)
+    AddTermAlternate(call, called, calls, cola, coal)
+    AddTermAlternate(compile, compiled, Compiled, Compile)
     AddTermAlternate(abort, aboard)
     AddTermAlternate(down, no, downed)
     AddTermAlternate(back, bag, peck)
@@ -20,14 +22,13 @@ addTermAlternates() :=
     AddTermAlternate(line, lined, lines, lying, lion, lions, wind, windsm wine, vine)
     AddTermAlternate(Edit, "And it")
     AddTermAlternate(right, write, rite, wright, rights, writes, wrights)
-    AddTermAlternate(step, steps, stepped, that)
+    AddTermAlternate(step, steps, stepped)
     AddTermAlternate(pick, eat, peek, peak, speak)
     AddTermAlternate(def, death, Death)
     AddTermAlternate(abort, aboard, a port)
     AddTermAlternate(push, porch, porche)
     AddTermAlternate(master, "massed her", "massed", "muster")
-    AddTermAlternate(build, "deal that")
-    AddTermAlternate(build all, "Beloved old", "the old old", "deal that all", "dealed all", "Beloved home", "Peel the O")
+    AddTermAlternate(build all, "deal that", "Beloved old", "the old old", "deal that all", "dealed all", "Beloved home", "Peel the O")
 
 
     AddTermAlternate(abort build, "A port deal", "A port build", "the old old")
@@ -41,6 +42,7 @@ addTermAlternates() :=
     AddTermAlternate(End, And, ends)
     AddTermAlternate(come, come, conn)
     AddTermAlternate(comma, cola, coma)
+    AddTermAlternate(dot, "don't", dought, doughty, doubt, doughts)
     
     
     ;
