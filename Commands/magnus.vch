@@ -1,0 +1,9 @@
+Micron      = "Micron ";
+Polygon     = "Polygon ";
+Polygons    = "Polygons ";
+Point       = "Point ";
+Points      = "Points ";
+settings    = "settings.";
+db          = "db.";
+slice       = "slice";
+slices      = "slices";
