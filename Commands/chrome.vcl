@@ -29,3 +29,5 @@ next page = {gn};
 previous page = {gp};
 
 place item in = {v};
+
+magnus mail = "arkadyv@magnusmetal.com";

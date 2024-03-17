@@ -12,3 +12,5 @@ peek = {Alt+F12};
 name = {F2};
 
 props = {Alt+Enter};
+breakpoint = {F9};
+call = "()";

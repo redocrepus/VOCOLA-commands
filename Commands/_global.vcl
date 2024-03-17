@@ -10,7 +10,7 @@
 
 $include termAlternates.vch;
 onLoad() := addTermAlternates();
-WSR_sleep() := SendSystemKeys({Ctrl+Alt+z});
+WSR_sleep() := HearCommand("stop listening");
 sleep = WSR_sleep();
 
 <number> := 1..30; 
@@ -36,6 +36,7 @@ unhold all = SendSystemKeys({Alt_Release}{Ctrl_Release}{Shift_Release});
          | dos = "Command prompt"
          | pad = "Notepad++"
          | TM = "Task Manager"
+         | outlook = "Microsoft Outlook"
          );
 
 test shift = SendSystemKeys({Shift+a});
@@ -80,8 +81,9 @@ up = SendSystemKeys({Up});
 down = SendSystemKeys({down});
 left = SendSystemKeys({Left});
 right = SendSystemKeys({Right});
-tab = SendSystemKeys({Tab});
+yes = SendSystemKeys({Tab});
 space = SendSystemKeys({Space});
+New line = SendSystemKeys({End}{Enter});
 
 up <number> = SendSystemKeys({Up_$1});
 down <number> = SendSystemKeys({down_$1});
@@ -148,7 +150,9 @@ wipe line = SendSystemKeys({Home} {Shift+End} {Delete});
 copy line = SendSystemKeys({Home} {Shift+End} {Ctrl+c});
 cut line = SendSystemKeys({Home} {Shift+End} {Ctrl+x});
 copy word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Ctrl+c});
+swap word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Delete} {Ctrl+v});
 cut word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Ctrl+x});
+delete word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Delete});
 wipe word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right} {Delete});
 
 
@@ -172,6 +176,7 @@ zero = 0;
 oh = 0;
 
 find = SendSystemKeys({Ctrl+f}) Wait(100) WSR_sleep();
+go to symbol = SendSystemKeys({Ctrl+i}) Wait(100) WSR_sleep();
 mega find = SendSystemKeys({Ctrl+Shift+f}) Wait(100) WSR_sleep();
 go file = SendSystemKeys({Ctrl+p});
 
@@ -187,7 +192,7 @@ move <number> = SendSystemKeys({Alt+down_$1});
 split <number> = SendSystemKeys({shift+Alt+down_$1});
 split up <number> = SendSystemKeys({shift+Alt+Up_$1});
 
-shade = SendSystemKeys({Ctrl+/});
+shade = SendSystemKeys({Ctrl+Shift+/});
 
 
 

@@ -4,7 +4,13 @@
 $using Library.Vocola;
 
 addTermAlternates() :=
+    AddTermAlternate(yes, years, his, Hess, "He's")
     AddTermAlternate(end, and, ends)
+    AddTermAlternate(woosh, wash)
+    AddTermAlternate(save, sava, safe, saved)
+    AddTermAlternate(boom, born, borne, burn, boon, boone, bowmen)
+    AddTermAlternate(back, bag, peck, bake)
+    AddTermAlternate(code, called)
     AddTermAlternate(abort, aboard)
     AddTermAlternate(down, no, downed)
     AddTermAlternate(back, bag, peck)
@@ -19,7 +25,7 @@ addTermAlternates() :=
     AddTermAlternate(hip, heap, heaped, hit, heat, heated, he)
     AddTermAlternate(line, lined, lines, lying, lion, lions, wind, windsm wine, vine)
     AddTermAlternate(Edit, "And it")
-    AddTermAlternate(right, write, rite, wright, rights, writes, wrights)
+    AddTermAlternate(right, be, write, rite, wright, rights, writes, wrights)
     AddTermAlternate(step, steps, stepped, that)
     AddTermAlternate(pick, eat, peek, peak, speak)
     AddTermAlternate(def, death, Death)
@@ -27,7 +33,8 @@ addTermAlternates() :=
     AddTermAlternate(push, porch, porche)
     AddTermAlternate(master, "massed her", "massed", "muster")
     AddTermAlternate(build, "deal that")
-    AddTermAlternate(build all, "Beloved old", "the old old", "deal that all", "dealed all", "Beloved home", "Peel the O")
+    AddTermAlternate(build all, below)
+    # AddTermAlternate(build all, "Beloved old", "the old old", "deal that all", "dealed all", "Beloved home", "Peel the O")
 
 
     AddTermAlternate(abort build, "A port deal", "A port build", "the old old")
