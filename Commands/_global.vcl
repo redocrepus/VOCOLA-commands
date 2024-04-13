@@ -117,34 +117,32 @@ end = SendSystemKeys({End});
 page up = SendSystemKeys({PageUp});
 page down = SendSystemKeys({Pagedown});
 
-mark = SendSystemKeys({Shift+Right});
-mark left = SendSystemKeys({Shift+Left});
-mark <number> = SendSystemKeys({Shift+Right_$1});
-mark left <number> = SendSystemKeys({Shift+Left_$1});
+mark = {Shift+Right};
+mark left = {Shift+Left};
+mark <number> = {Shift+Right_$1};
+mark left <number> = {Shift+Left_$1};
 
-mark hop  = SendSystemKeys({Ctrl+Shift+Right});
-mirck = SendSystemKeys({Ctrl+Shift+Left});
+mark hop = {Ctrl+Shift+Right};
+mirck = {Ctrl+Shift+Left};
 
-mark hop <number> = SendSystemKeys({Ctrl+Shift+Right_$1});
-mirck <number> = SendSystemKeys({Ctrl+Shift+Left_$1});
+mark hop <number> = {Ctrl+Shift+Right_$1};
+mirck <number> = {Ctrl+Shift+Left_$1};
 
-mark up = SendSystemKeys({Ctrl+Shift+Up});
-mark down = SendSystemKeys({Shift+down});
-mark up <number> = SendSystemKeys({Shift+Up_$1});
-mark down <number> = SendSystemKeys({Shift+down_$1});
+mark up = {Ctrl+Shift+Up};
+mark down = {Shift+down};
+mark up <number> = {Shift+Up_$1};
+mark down <number> = {Shift+down_$1};
 
-mark hop home = SendSystemKeys({Ctrl+Shift+Home});
-mark hop end = SendSystemKeys({Ctrl+Shift+End});
+mark hop home = {Ctrl+Shift+Home};
+mark hop end = {Ctrl+Shift+End};
 
+mark home = {Shift+Home};
+mark end = {Shift+End};
+mark page up = {Shift+PageUp};
+mark page = {Shift+Pagedown};
 
-mark home = SendSystemKeys({Shift+Home});
-mark end = SendSystemKeys({Shift+End});
-mark page up = SendSystemKeys({Shift+PageUp});
-mark page = SendSystemKeys({Shift+Pagedown});
-
-mark word = SendSystemKeys({Ctrl+Left} {Ctrl+Shift+Right});
-mark line = SendSystemKeys({Shift+End} {Shift+Home});
-
+mark word = {Ctrl+Left} {Ctrl+Shift+Right};
+mark line = {Shift+End} {Shift+Home};
 
 yum = SendSystemKeys({Delete});
 yum <number> = SendSystemKeys({Delete_$1});
