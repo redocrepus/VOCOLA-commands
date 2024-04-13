@@ -1,7 +1,8 @@
 # Global voice commands (see https://vocola.net/v3/LanguageReference)
 # TODO: optimized number and line number variables
 # $using Library.Vocola;
-# tick = {LeftButton};
+shoot = {LeftButton};
+strike = {LeftButton} {LeftButton};
 # take = {LeftButton_Hold};
 # dump = {LeftButton_Release};
 
@@ -52,9 +53,10 @@ step <number> = SendSystemKeys({F10_$1});
 dive = SendSystemKeys({F11});
 step out = SendSystemKeys({Shift+F11});
 breakpoint = SendSystemKeys({F9});
+disable = SendSystemKeys({Ctrl+F9});
 bug here = SendSystemKeys({Ctrl+F10});
 run here = SendSystemKeys({Ctrl+F10});
-build all = SendSystemKeys({Ctrl+Shift+b});
+solution = SendSystemKeys({Ctrl+Shift+b});
 abort build = SendSystemKeys({Ctrl+Break});
 complie = SendSystemKeys({Ctrl+F7});
 
@@ -164,6 +166,7 @@ go tab <number>= SendSystemKeys({Ctrl+tab_$1});
 back tab <number>= SendSystemKeys({Ctrl+Shift+tab_$1});
 
 go to line = SendSystemKeys({Ctrl+g});
+go to lying = SendSystemKeys({Ctrl+g});
 one = 1;
 two = 2;
 three = 3;
@@ -177,9 +180,9 @@ nine = 9;
 zero = 0;
 oh = 0;
 
-find = SendSystemKeys({Ctrl+f}) Wait(100) WSR_sleep();
-go to symbol = SendSystemKeys({Ctrl+i}) Wait(100) WSR_sleep();
-mega find = SendSystemKeys({Ctrl+Shift+f}) Wait(100) WSR_sleep();
+find = SendSystemKeys({Ctrl+f});  # Wait(100) WSR_sleep();
+go to symbol = SendSystemKeys({Ctrl+i}); # Wait(100) WSR_sleep();
+mega find = SendSystemKeys({Ctrl+Shift+f}); # Wait(100) WSR_sleep();
 go file = SendSystemKeys({Ctrl+p});
 
 hop end = SendSystemKeys({Ctrl+End});
@@ -194,7 +197,7 @@ move <number> = SendSystemKeys({Alt+down_$1});
 split <number> = SendSystemKeys({shift+Alt+down_$1});
 split up <number> = SendSystemKeys({shift+Alt+Up_$1});
 
-shade = SendSystemKeys({Ctrl+Shift+/});
+shade = SendSystemKeys({Ctrl+/});
 
 
 quote = {U+0022} {U+0022} SendSystemKeys({Left});
@@ -212,3 +215,5 @@ next <number> = SendSystemKeys({F3_$1});
 former <number> = SendSystemKeys({Shift+F3_$1});
 
 dot = SendSystemKeys({.});
+
+english = {Shift+Alt};
